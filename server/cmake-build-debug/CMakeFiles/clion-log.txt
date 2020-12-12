@@ -1,0 +1,4 @@
+/home/dyh/app/clion-2020.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dyh/workspace/cpp/cpp_socket_demo/server
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dyh/workspace/cpp/cpp_socket_demo/server/cmake-build-debug
