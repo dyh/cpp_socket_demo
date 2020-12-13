@@ -330,10 +330,6 @@ utility
 vector
 -
 
-/home/dyh/workspace/cpp/cpp_socket_demo/server/message.cpp
-message.h
-/home/dyh/workspace/cpp/cpp_socket_demo/server/message.h
-
 /home/dyh/workspace/cpp/cpp_socket_demo/server/message.h
 ctime
 -
@@ -357,4 +353,34 @@ mutex
 -
 json.hpp
 /home/dyh/workspace/cpp/cpp_socket_demo/server/json.hpp
+
+/home/dyh/workspace/cpp/cpp_socket_demo/server/server.cpp
+server.h
+/home/dyh/workspace/cpp/cpp_socket_demo/server/server.h
+
+/home/dyh/workspace/cpp/cpp_socket_demo/server/server.h
+ctime
+-
+iostream
+-
+thread
+-
+vector
+-
+sys/socket.h
+-
+netinet/in.h
+-
+unistd.h
+-
+arpa/inet.h
+-
+opencv2/opencv.hpp
+-
+mutex
+-
+json.hpp
+/home/dyh/workspace/cpp/cpp_socket_demo/server/json.hpp
+message.h
+/home/dyh/workspace/cpp/cpp_socket_demo/server/message.h
 

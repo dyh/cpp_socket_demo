@@ -143,32 +143,86 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-main.o: main.cpp.o
+client.o: client.cpp.o
 
-.PHONY : main.o
+.PHONY : client.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/main.cpp.o
-.PHONY : main.cpp.o
+client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.o
+.PHONY : client.cpp.o
 
-main.i: main.cpp.i
+client.i: client.cpp.i
 
-.PHONY : main.i
+.PHONY : client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/main.cpp.i
-.PHONY : main.cpp.i
+client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.i
+.PHONY : client.cpp.i
 
-main.s: main.cpp.s
+client.s: client.cpp.s
 
-.PHONY : main.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/main.cpp.s
-.PHONY : main.cpp.s
+client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+message.o: message.cpp.o
+
+.PHONY : message.o
+
+# target to build an object file
+message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/message.cpp.o
+.PHONY : message.cpp.o
+
+message.i: message.cpp.i
+
+.PHONY : message.i
+
+# target to preprocess a source file
+message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/message.cpp.i
+.PHONY : message.cpp.i
+
+message.s: message.cpp.s
+
+.PHONY : message.s
+
+# target to generate assembly for a file
+message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/message.cpp.s
+.PHONY : message.cpp.s
+
+test-client.o: test-client.cpp.o
+
+.PHONY : test-client.o
+
+# target to build an object file
+test-client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test-client.cpp.o
+.PHONY : test-client.cpp.o
+
+test-client.i: test-client.cpp.i
+
+.PHONY : test-client.i
+
+# target to preprocess a source file
+test-client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test-client.cpp.i
+.PHONY : test-client.cpp.i
+
+test-client.s: test-client.cpp.s
+
+.PHONY : test-client.s
+
+# target to generate assembly for a file
+test-client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test-client.cpp.s
+.PHONY : test-client.cpp.s
 
 # Help Target
 help:
@@ -179,9 +233,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... message.o"
+	@echo "... message.i"
+	@echo "... message.s"
+	@echo "... test-client.o"
+	@echo "... test-client.i"
+	@echo "... test-client.s"
 .PHONY : help
 
 

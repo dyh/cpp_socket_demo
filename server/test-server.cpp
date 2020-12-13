@@ -7,14 +7,9 @@ using namespace std;
 int main() {
     cout << "socket server is starting..." << endl;
 
-    try {
-        Server server = Server("0.0.0.0", 65432, 10);
-        server.Start();
-
-    }
-    catch (...) {
-        cout <<"1" << endl;
-    }
+    string host1 = "0.0.0.0";
+    Server server = Server(host1, 65432, 10);
+    server.Start();
 
     return 0;
 }

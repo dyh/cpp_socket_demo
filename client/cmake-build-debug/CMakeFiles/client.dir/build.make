@@ -77,30 +77,101 @@ include CMakeFiles/client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/client.dir/flags.make
 
-CMakeFiles/client.dir/main.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/main.cpp.o -c /home/dyh/workspace/cpp/cpp_socket_demo/client/main.cpp
+CMakeFiles/client.dir/test-client.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/test-client.cpp.o: ../test-client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/test-client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/test-client.cpp.o -c /home/dyh/workspace/cpp/cpp_socket_demo/client/test-client.cpp
 
-CMakeFiles/client.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dyh/workspace/cpp/cpp_socket_demo/client/main.cpp > CMakeFiles/client.dir/main.cpp.i
+CMakeFiles/client.dir/test-client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/test-client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dyh/workspace/cpp/cpp_socket_demo/client/test-client.cpp > CMakeFiles/client.dir/test-client.cpp.i
 
-CMakeFiles/client.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dyh/workspace/cpp/cpp_socket_demo/client/main.cpp -o CMakeFiles/client.dir/main.cpp.s
+CMakeFiles/client.dir/test-client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/test-client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dyh/workspace/cpp/cpp_socket_demo/client/test-client.cpp -o CMakeFiles/client.dir/test-client.cpp.s
+
+CMakeFiles/client.dir/client.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client.cpp.o: ../client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client.cpp.o -c /home/dyh/workspace/cpp/cpp_socket_demo/client/client.cpp
+
+CMakeFiles/client.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dyh/workspace/cpp/cpp_socket_demo/client/client.cpp > CMakeFiles/client.dir/client.cpp.i
+
+CMakeFiles/client.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dyh/workspace/cpp/cpp_socket_demo/client/client.cpp -o CMakeFiles/client.dir/client.cpp.s
+
+CMakeFiles/client.dir/message.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/message.cpp.o: ../message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/message.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/message.cpp.o -c /home/dyh/workspace/cpp/cpp_socket_demo/client/message.cpp
+
+CMakeFiles/client.dir/message.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/message.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dyh/workspace/cpp/cpp_socket_demo/client/message.cpp > CMakeFiles/client.dir/message.cpp.i
+
+CMakeFiles/client.dir/message.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/message.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dyh/workspace/cpp/cpp_socket_demo/client/message.cpp -o CMakeFiles/client.dir/message.cpp.s
 
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/main.cpp.o"
+"CMakeFiles/client.dir/test-client.cpp.o" \
+"CMakeFiles/client.dir/client.cpp.o" \
+"CMakeFiles/client.dir/message.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-client: CMakeFiles/client.dir/main.cpp.o
+client: CMakeFiles/client.dir/test-client.cpp.o
+client: CMakeFiles/client.dir/client.cpp.o
+client: CMakeFiles/client.dir/message.cpp.o
 client: CMakeFiles/client.dir/build.make
+client: /usr/lib/x86_64-linux-gnu/libopencv_shape.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_face.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_reg.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_text.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+client: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dyh/workspace/cpp/cpp_socket_demo/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
