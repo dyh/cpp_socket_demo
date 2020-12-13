@@ -26,20 +26,22 @@ void Client::Start(const string& folder_path) {
 
     // target image list
     vector<string> vector_filename_list;
-    // target images folder
-//    string folder_path = "/home/dyh/workspace/datasets/coco/val2017";
     // load and fill the path of files to vector
     GetFileList(folder_path, vector_filename_list);
 
+
     long i_file_count = vector_filename_list.size();
 
-    std::vector<int> imencode_params;
-    imencode_params.push_back(cv::IMWRITE_JPEG_QUALITY);
-    imencode_params.push_back(100);
+//    std::vector<int> imencode_params;
+//    imencode_params.push_back(cv::IMWRITE_JPEG_QUALITY);
+//    imencode_params.push_back(100);
 
     auto message = Message(client_fd, this->address_);
 
     auto i_file_index = 0;
+
+    // record begin time
+    auto timestamp_ms_1 = Client::GetCurrentTimestamp();
 
     for (const auto &image_path : vector_filename_list) {
         Mat mat_image = imread(image_path, IMREAD_COLOR);
@@ -64,7 +66,7 @@ void Client::Start(const string& folder_path) {
                 cv::imdecode(vector_image, cv::ImreadModes::IMREAD_COLOR, &mat_image_show);
 
                 cv::imshow("client", mat_image_show);
-                cv::waitKey(100);
+                cv::waitKey(1);
 
                 mat_image_show.release();
 
@@ -82,14 +84,19 @@ void Client::Start(const string& folder_path) {
         }
 
         mat_image.release();
+
+        usleep(1);
     }
 
-    imencode_params.clear();
-    vector<int>().swap(imencode_params);
+//    imencode_params.clear();
+//    vector<int>().swap(imencode_params);
 
-    cout << "shutdown client_fd" << endl;
+    auto timestamp_ms_2 = Client::GetCurrentTimestamp() - timestamp_ms_1;
+    cout << "times: " << timestamp_ms_2 / 1000 << " seconds" << endl;
+
     shutdown(client_fd, SHUT_RDWR);
 
+    cout << "done" << endl;
 }
 
 /*!
@@ -113,4 +120,15 @@ void Client::GetFileList(const string& path, vector<string>& vector_filename) {
     sort(vector_filename.begin(), vector_filename.end());
 
     closedir(pDir);
+}
+
+
+/*!
+ * @brief get current time ticks
+ * @return ticks long
+*/
+long Client::GetCurrentTimestamp() {
+    std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> tp = std::chrono::time_point_cast<std::chrono::milliseconds>(
+            std::chrono::system_clock::now());
+    return tp.time_since_epoch().count();
 }

@@ -38,6 +38,8 @@ private:
 
     static void GetFileList(const string& path, vector<string>& vector_filename);
 
+    // get current time ticks
+    static long GetCurrentTimestamp();
 };
 
 
