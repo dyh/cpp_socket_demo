@@ -27,7 +27,7 @@ public:
 
     ~Message();
 
-    void GetImageBufferResult(unsigned char *&output_content, long &output_length);
+    void GetImageBufferResult(unsigned char*& output_content, long& output_length);
 
     void Clear();
 
@@ -84,9 +84,9 @@ private:
 
     void ProcessContent();
 
-    static void Short2Char(unsigned char *char_str, unsigned char short_str);
+    static void Short2Char(unsigned char* char_str, unsigned char short_str);
 
-    static unsigned short Char2Short(const unsigned char *char_str);
+    static unsigned short Char2Short(const unsigned char* char_str);
 
 };
 

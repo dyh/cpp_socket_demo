@@ -12,7 +12,8 @@ int main() {
 
     cout << address1 << endl;
 
-    client.Start("/home/dyh/workspace/datasets/coco/val2017");
+//    client.Start("/home/dyh/workspace/datasets/coco/val2017");
+    client.Start("/home/dyh/workspace/unbox/unbox_cpp_caffe2/python_project/images/train");
 
     return 0;
 }

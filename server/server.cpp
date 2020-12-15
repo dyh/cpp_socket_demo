@@ -41,7 +41,7 @@ Server::Server(const string& host, int port, int timeout) {
     server_addr.sin_port = htons(this->port_);
     server_addr.sin_addr.s_addr = inet_addr(this->host_);
 
-    if (bind(socket_fd, (struct sockaddr *) &server_addr, sizeof(server_addr)) == -1) {
+    if (bind(socket_fd, (struct sockaddr *)& server_addr, sizeof(server_addr)) == -1) {
         perror("Error: bind");
     }
 
@@ -58,7 +58,7 @@ Server::Server(const string& host, int port, int timeout) {
         struct sockaddr_in client_addr{};
         socklen_t client_addr_len = sizeof(client_addr);
 
-        int new_connection_fd = accept(socket_fd, (struct sockaddr *) &client_addr, &client_addr_len);
+        int new_connection_fd = accept(socket_fd, (struct sockaddr *)& client_addr, &client_addr_len);
 
         if (new_connection_fd < 0) {
             perror("Error: accept");
@@ -127,7 +127,7 @@ void Server::TimeoutHandle() {
                         this->map_latest_message_timestamp_.end(),
 
                         [timestamp_now, timeout_value_ms, &output_thread_name]
-                        (map<long, long>::value_type &item) {
+                        (map<long, long>::value_type& item) {
                             auto ret = ((timestamp_now - item.second) > timeout_value_ms);
                             if (ret) {
                                 output_thread_name = item.first;
@@ -158,7 +158,7 @@ void Server::TimeoutHandle() {
  * @param[in] client_address
  * @param[in] thread_name
 */
-void Server::SocketHandle(int connection_fd, const string &client_address, long thread_name) {
+void Server::SocketHandle(int connection_fd, const string& client_address, long thread_name) {
 
     cout << "accepted connection from " << client_address << endl;
     auto message = Message(connection_fd, client_address);
@@ -173,7 +173,7 @@ void Server::SocketHandle(int connection_fd, const string &client_address, long 
             if (find_if(this->map_latest_message_timestamp_.begin(),
                         this->map_latest_message_timestamp_.end(),
                         [thread_name]
-                                (map<long, long>::value_type &item) { return item.first == thread_name; })
+                                (map<long, long>::value_type& item) { return item.first == thread_name; })
                 != this->map_latest_message_timestamp_.end()) {
 
             } else {
@@ -239,7 +239,7 @@ void Server::SocketHandle(int connection_fd, const string &client_address, long 
             if (find_if(this->map_latest_message_timestamp_.begin(),
                         this->map_latest_message_timestamp_.end(),
                         [thread_name]
-                                (map<long, long>::value_type &item) { return item.first == thread_name; })
+                                (map<long, long>::value_type& item) { return item.first == thread_name; })
                 != this->map_latest_message_timestamp_.end()) {
 
                 this->map_latest_message_timestamp_[thread_name] = Server::GetCurrentTimestamp();

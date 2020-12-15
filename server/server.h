@@ -23,13 +23,13 @@ using namespace std::chrono;
 class Server {
 
 public:
-    Server(const string &host, int port, int timeout);
+    Server(const string& host, int port, int timeout);
 
     [[noreturn]] void Start();
 
 private:
     // host address
-    const char *host_;
+    const char* host_;
 
     //port number
     int port_;
@@ -47,7 +47,7 @@ private:
     thread thread_timeout_daemon_;
 
     // socket function in thread
-    void SocketHandle(int connection_fd, const string &client_address, long thread_name);
+    void SocketHandle(int connection_fd, const string& client_address, long thread_name);
 
     // timeout function in thread
     [[noreturn]] void TimeoutHandle();

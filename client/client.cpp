@@ -7,6 +7,9 @@ Client::Client(const string& server_address, int port) {
 }
 
 void Client::Start(const string& folder_path) {
+    // record begin time
+    auto timestamp_ms_1 = Client::GetCurrentTimestamp();
+
     int client_fd = socket(AF_INET, SOCK_STREAM, IPPROTO_IP);
 
     if (client_fd == -1) {
@@ -19,7 +22,7 @@ void Client::Start(const string& folder_path) {
     serverAddr.sin_port = htons(this->port_);
     serverAddr.sin_addr.s_addr = inet_addr(this->address_);
 
-    auto is_connected = connect(client_fd, (struct sockaddr *) &serverAddr, sizeof(serverAddr));
+    auto is_connected = connect(client_fd, (struct sockaddr *)& serverAddr, sizeof(serverAddr));
     if (is_connected < 0) {
         perror("Error: connect");
     }
@@ -28,7 +31,6 @@ void Client::Start(const string& folder_path) {
     vector<string> vector_filename_list;
     // load and fill the path of files to vector
     GetFileList(folder_path, vector_filename_list);
-
 
     long i_file_count = vector_filename_list.size();
 
@@ -40,11 +42,22 @@ void Client::Start(const string& folder_path) {
 
     auto i_file_index = 0;
 
-    // record begin time
-    auto timestamp_ms_1 = Client::GetCurrentTimestamp();
+    // resize our input images to fit with model
+    cv::Size dSize = cv::Size(800, 800);
 
-    for (const auto &image_path : vector_filename_list) {
-        Mat mat_image = imread(image_path, IMREAD_COLOR);
+    for (const auto& image_path : vector_filename_list) {
+        // load image from file path, the size of image maybe w:2050 h:2411
+        Mat mat_temp = imread(image_path, IMREAD_COLOR);
+
+        // define a new Mat object with w:800 h:800
+        Mat mat_image(dSize, CV_32F);
+
+        // resize input image, from w:2050 h:2411 to w:800 h:800
+        resize(mat_temp, mat_image, dSize, INTER_LINEAR);
+
+        // release the image matrix from imread
+        mat_temp.release();
+
         message.Clear();
         message.WriteImage(mat_image);
 
@@ -77,9 +90,7 @@ void Client::Start(const string& folder_path) {
                 cout << "# " << i_file_index << " / " << i_file_count << " files sent" << endl;
                 i_file_index++;
             }
-        }
-        else
-        {
+        } else {
             break;
         }
 

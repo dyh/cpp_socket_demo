@@ -5,7 +5,7 @@
  * @param[in] socket_fd accepted socket file descriptor
  * @param[in] client_address ip address of client
 */
-Message::Message(int socket_fd, const string &client_address) {
+Message::Message(int socket_fd, const string& client_address) {
 
     this->socket_fd_ = socket_fd;
     this->client_address_ = client_address;
@@ -21,7 +21,7 @@ Message::Message(int socket_fd, const string &client_address) {
  * @param [out] output_content image char[] array for output
  * @param [out] output_length length of char[]
 */
-void Message::GetImageBufferResult(unsigned char *&output_content, long &output_length) {
+void Message::GetImageBufferResult(unsigned char*& output_content, long& output_length) {
     output_content = this->image_buffer_;
     output_length = this->image_buffer_length_;
 }
@@ -313,7 +313,7 @@ void Message::Short2Char(unsigned char *char_str, unsigned char short_str) {
  * @param[in] char_str input char* variable
  * @return short value
 */
-unsigned short Message::Char2Short(const unsigned char *char_str) {
+unsigned short Message::Char2Short(const unsigned char* char_str) {
     unsigned short s0 = char_str[0];
     unsigned short s1 = char_str[1];
 //    unsigned short s0 = char_str[0] | 0xffu;

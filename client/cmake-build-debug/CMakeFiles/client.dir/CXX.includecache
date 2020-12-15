@@ -362,6 +362,10 @@ utility
 vector
 -
 
+/home/dyh/workspace/cpp/cpp_socket_demo/client/message.cpp
+message.h
+/home/dyh/workspace/cpp/cpp_socket_demo/client/message.h
+
 /home/dyh/workspace/cpp/cpp_socket_demo/client/message.h
 ctime
 -
@@ -385,4 +389,10 @@ mutex
 -
 json.hpp
 /home/dyh/workspace/cpp/cpp_socket_demo/client/json.hpp
+
+/home/dyh/workspace/cpp/cpp_socket_demo/client/test-client.cpp
+iostream
+-
+client.h
+/home/dyh/workspace/cpp/cpp_socket_demo/client/client.h
 

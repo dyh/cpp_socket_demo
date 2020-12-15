@@ -25,7 +25,7 @@ class Client {
 
 public:
 
-    Client(const string &server_address, int port);
+    Client(const string& server_address, int port);
 
     void Start(const string& folder_path);
 
